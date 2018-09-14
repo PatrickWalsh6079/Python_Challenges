@@ -6,7 +6,9 @@ Given two integers, return True if the sum of both integers is 20 or if one inte
 
 
 def makes_twenty(a,b):
+
     return sum([a,b]) == 20 or 20 in (a,b)
+    
     ################################################################
     #Function takes in two arguments, then returns boolean operator.
     ################################################################
