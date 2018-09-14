@@ -1,3 +1,5 @@
+#LESSER OF TWO EVENS
+
 '''
 Function that returns the lesser of two given numbers if both numbers are even, but returns 
 the greater number if one or both numbers are odd.
