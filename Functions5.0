@@ -1,0 +1,23 @@
+'''
+Given two integers, return True if the sum of both integers is 20 or if one integer is 20. If not, return false.
+'''
+
+
+def makes_twenty(a,b):
+    return sum([a,b]) == 20 or 20 in (a,b)
+    ################################################################
+    #Function takes in two arguments, then returns boolean operator.
+    ################################################################
+
+
+# Check1
+print(makes_twenty(20,10))
+#OUTPUT: True
+
+# Check2
+print(makes_twenty(21,3))
+#OUTPUT: False
+
+# Check3
+print(makes_twenty(10,10))
+#OUTPUT: True
