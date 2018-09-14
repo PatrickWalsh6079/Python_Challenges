@@ -1,0 +1,59 @@
+'''
+Function that capitalizes first and fourth letters of a name. I came up with two solutions for this.
+'''
+##################
+#SOLUTION NUMBER 1
+##################
+
+def old_macdonald(name):
+    pre = name[:3]
+    post = name[3:]
+    ##########################################################################
+    #Slices name into two parts, then uses capitalize method to make the first
+    #letters of each part uppercase.
+    ##########################################################################
+    return pre.capitalize()+post.capitalize()
+    
+
+# Check
+print(old_macdonald('macdonald'))  
+#OUTPUT: MacDonald
+
+
+
+##################
+#SOLUTION NUMBER 2
+##################
+
+
+def old_macdonald(name):
+    newname = ''
+    ####################################################
+    #Creates new string in which to rebuild the letters.
+    ####################################################
+    
+    counter = 0
+    ###########################################################
+    #Counter variable will iterate through each index of name.
+    ##########################################################
+    
+    for i in name:
+        ###############################################################################
+        #If statement checks for letters at 0 and 3 index position, makes those letters
+        #uppercase, and adds that letter to the new string.
+        ###############################################################################
+        if counter == 0 or counter == 3:
+            newname += i.upper()
+            counter += 1
+        else:
+            ################################################################
+            #Any letters not at index 0 or 3 are simply added to new string.
+            ################################################################
+            newname += i
+            counter +=1
+    return newname
+
+
+# Check
+print(old_macdonald('macdonald'))
+#OUTPUT: MacDonald
