@@ -43,8 +43,8 @@ print(blackjack(5,6,7))
 
 # Check
 print(blackjack(9,9,9))
-#OUTPUT:
+#OUTPUT: BUST
 
 # Check
 print(blackjack(9,9,11))
-#OUTPUT:
+#OUTPUT: 19
