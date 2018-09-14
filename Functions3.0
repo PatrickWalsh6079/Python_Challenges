@@ -1,0 +1,29 @@
+'''
+Function that returns the lesser of two given numbers if both numbers are even, but returns 
+the greater number if one or both numbers are odd.
+'''
+
+def lesser_of_two_evens(a,b):
+    ##############################
+    #Function takes two arguments.
+    ##############################
+    if a%2 == 0 and b%2 == 0:
+        ###############################################################################
+        #If statement checks if both numbers are even, then returns the smaller number.
+        ###############################################################################
+        return min(a,b)
+    else:
+        #######################################################################
+        #Else statement catches any odd numbers and returns the greater number.
+        #######################################################################
+        return max(a,b)
+    
+
+    
+#Check1
+print(lesser_of_two_evens(2,4))
+#OUTPUT: 2
+
+# Check2
+print(lesser_of_two_evens(2,5))
+#OUTPUT: 5  
