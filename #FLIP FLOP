@@ -1,3 +1,5 @@
+#FLIP FLOP
+
 '''
 Given a string of letters, make letters at even indexes lowercase and odd indexes uppercase.
 '''
