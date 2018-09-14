@@ -6,18 +6,22 @@ Given a sentence, return the sentence with the words reversed, like Yoda.
 
 
 def master_yoda(string):
+
     yodafy = string.split()
+    
     #####################################################
     #Uses split method and assigns value to new variable.
     #####################################################
     
     final = ' '.join(yodafy[::-1])
+    
     ########################################################
     #[::-1] reverses order of items in yodafy list, then the 
     #join method returns yodafy list as string.
     ########################################################
     
     return final.capitalize()
+    
     ##############################################################
     #Lastly, new string is returned with first letter capitalized.
     ##############################################################
