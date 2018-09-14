@@ -19,28 +19,37 @@ def has_33(nums):
     ############################
     #Set initial result to False
     ############################
+    
     ###################################################################
     #Counter must be less than limit, because the if statement compares
     #the integer at a given index, plus the following integer.
     ###################################################################
+    
     while counter < limit:
+    
         ######################################################
         #If statement checks if two consecutive integers are 3
         ######################################################
+        
         if nums[counter] == 3 and nums[counter+1] == 3:
+        
             #######################################
             #If integers are 3s, set result to true 
             #and break out of while loop.
             #######################################
+            
             result = True
             break
+            
         else:
             #############################################
             #If both integers are not 3, add 1 to counter
             #and continue while loop.
             #############################################
+            
             counter += 1
             continue
+            
     return result
 
 
