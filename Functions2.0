@@ -29,6 +29,7 @@ def flip_flop(string):
             counter += 1
     return newstr
 
-flip_flop('the nerd life chose me')
 
+#Check
+flip_flop('the nerd life chose me')
 #OUTPUT: 'tHe nErD LiFe cHoSe mE'
