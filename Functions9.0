@@ -1,0 +1,34 @@
+'''
+Given a string, return the string with each character repeating 3 times.
+'''
+
+
+def paper_doll(string):
+    newstr = ''
+    ####################################################
+    #Create new string in which to rebuild the letters.
+    ###################################################
+    
+    counter = 0
+    #################################################
+    #Use counter variable to iterate through string.
+    ################################################
+    
+    for i in string:
+        ###########################################################################
+        #Adds letter x3 to new string, adding 1 to counter through each iteration.
+        ##########################################################################
+        
+        newstr += i*3
+        counter += 1
+    return newstr
+
+
+# Check
+print(paper_doll('Hello'))
+#OUTPUT: HHHeeellllllooo
+
+
+# Check
+print(paper_doll('Mississippi'))
+#OUTPUT: MMMiiissssssiiissssssiiippppppiii
