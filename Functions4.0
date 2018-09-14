@@ -1,0 +1,23 @@
+'''
+Function that takes two-word string and returns True if each word begins with same letter.
+'''
+
+def animal_crackers(string):
+    strlist = string.lower().split()
+    ###############################################################
+    #Makes string lowercase and uses split method to put into list.
+    ###############################################################
+    
+    return strlist[0][0] == strlist[1][0]
+    ########################################################################
+    #Returns boolean comparison operator for the first letters of each word.
+    ########################################################################
+
+
+# Check1
+print(animal_crackers('levelheaded Llama'))
+#OUTPUT: True
+
+# Check2
+print(animal_crackers('Crazy Kangaroo'))
+#OUTPUT: False
