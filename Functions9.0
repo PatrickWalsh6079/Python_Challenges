@@ -9,18 +9,12 @@ def paper_doll(string):
     #Create new string in which to rebuild the letters.
     ###################################################
     
-    counter = 0
-    #################################################
-    #Use counter variable to iterate through string.
-    ################################################
-    
     for i in string:
-        ###########################################################################
-        #Adds letter x3 to new string, adding 1 to counter through each iteration.
-        ##########################################################################
+        ###############################
+        #Adds letter x3 to new string.
+        ##############################
         
         newstr += i*3
-        counter += 1
     return newstr
 
 
