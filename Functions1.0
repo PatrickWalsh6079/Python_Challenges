@@ -41,11 +41,17 @@ def has_33(nums):
             continue
     return result
 
-# Check
+# Check1
 print(has_33([1, 3, 3]))
 
-# Check
+#OUTPUT: True
+
+# Check2
 print(has_33([3, 1, 3, 3]))
 
-# Check
+#OUTPUT: True
+
+# Check3
 print(has_33([3, 1, 3, 4, 3]))
+
+#OUTPUT: False
