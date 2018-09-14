@@ -6,10 +6,12 @@ Given an integer n, return true if n is within 10 of either 100 or 200.
 
 
 def almost_there(n):
+
     ####################################################
     #Returns boolean statement for integer n, if n falls
     #within either range.
     ####################################################
+    
     return n in range(90,111) or n in range(190,211)
 
 
