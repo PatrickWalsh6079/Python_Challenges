@@ -17,15 +17,19 @@ def flip_flop(string):
     ################################################
     
     for i in string:
+    
         #########################################################
         #If statement checks for letters at even index positions.
         #########################################################
+        
         if counter%2 == 0:
             newstr += i.lower()
             counter += 1
+            
         #####################################################
         #Else statement takes letters at odd index positions.
         #####################################################
+        
         else:
             newstr += i.upper()
             counter += 1
