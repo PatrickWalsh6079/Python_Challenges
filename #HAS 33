@@ -1,3 +1,5 @@
+#HAS 33
+
 '''
 Given a list of integers, return True if there are two consecutive 3s, and False if condition is not met.
 '''
