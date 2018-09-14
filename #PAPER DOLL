@@ -6,12 +6,15 @@ Given a string, return the string with each character repeating 3 times.
 
 
 def paper_doll(string):
+
     newstr = ''
+    
     ####################################################
     #Create new string in which to rebuild the letters.
     ###################################################
     
     for i in string:
+    
         ###############################
         #Adds letter x3 to new string.
         ##############################
@@ -20,11 +23,11 @@ def paper_doll(string):
     return newstr
 
 
-# Check
+#Check1
 print(paper_doll('Hello'))
 #OUTPUT: HHHeeellllllooo
 
 
-# Check
+#Check2
 print(paper_doll('Mississippi'))
 #OUTPUT: MMMiiissssssiiissssssiiippppppiii
