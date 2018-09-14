@@ -1,0 +1,34 @@
+'''
+Given a string of letters, make letters at even indexes lowercase and odd indexes uppercase.
+'''
+
+def flip_flop(string):
+
+    newstr = ''
+    #################################################
+    #Create new variable in which to build new string
+    #################################################
+    
+    counter = 0
+    ################################################
+    #Use counter variable to iterate through string.
+    ################################################
+    
+    for i in string:
+        #########################################################
+        #If statement checks for letters at even index positions.
+        #########################################################
+        if counter%2 == 0:
+            newstr += i.lower()
+            counter += 1
+        #####################################################
+        #Else statement takes letters at odd index positions.
+        #####################################################
+        else:
+            newstr += i.upper()
+            counter += 1
+    return newstr
+
+flip_flop('the nerd life chose me')
+
+#OUTPUT: 'tHe nErD LiFe cHoSe mE'
