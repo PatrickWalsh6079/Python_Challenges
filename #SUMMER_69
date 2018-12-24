@@ -1,0 +1,77 @@
+'''
+SUMMER OF 69
+
+
+
+Return the sum of numbers in the array, ignoring sections that begin with 6 and end with 9.
+Every time a six appears in the list, there will be a 9 following it. Return 0 for no numbers.
+'''
+
+
+
+
+def summer_69(arr):
+    ######################
+    #Iterate through list
+    #####################
+    counter = 0
+    final = sum(arr)
+    remover = False
+    
+    ########################################
+    #start for loop to iterate through list
+    ########################################
+    for i in arr:
+        ###############################################################################
+        #remover variable is set to False by default. If it is True, break out of loop.
+        ###############################################################################
+        if remover == True:
+            break
+        #################################################################################
+        #check if number at given index is a 6. If it is, subtract that number from final
+        #and set remover variable to True.
+        #################################################################################
+        if arr[counter] == 6:
+            final -= arr[counter]
+            counter += 1
+            remover = True
+            #################################################################
+            #after adding 1 to counter, check if next number is a 9.
+            #if it is not, subtract number from final and continue the loop.
+            #if it is a 9, subtract the 9 and break out of loop.
+            ################################################################
+            while remover == True:
+                if arr[counter] != 9:
+                    final -= arr[counter]
+                    counter += 1
+                    continue
+                else:
+                    final -= arr[counter]
+                    break
+                
+        else:
+            counter += 1
+            continue
+    return final
+
+#check 1
+print(summer_69([1,3,5]))
+
+#check 2
+print(summer_69([4,5,6,7,8,9]))   
+    
+#check 3
+print(summer_69([2,1,6,9,11]))
+
+#check 4
+print(summer_69([2,6,6,9,2]))
+
+
+'''
+EXPECTED OUTPUT:
+
+9
+9
+14
+4
+'''
