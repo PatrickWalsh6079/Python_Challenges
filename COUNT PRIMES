@@ -1,0 +1,42 @@
+'''
+COUNT PRIMES
+
+This program returns the number of prime numbers, up to and 
+including a given number. We will treat 0 and 1 as not prime.
+'''
+
+def count_primes(value):
+    ##############################################################
+    # start with empty list that we will append prime number into.
+    ##############################################################
+    prime_nums = []
+    
+    #######################################################
+    # start for loop that iterates through to input value.
+    ######################################################
+    for i in range(value):
+        
+        ##################################################################################################
+        # if statement precludes 1, and checks if number is 3,5, or 7, which we know are prime.
+        # after that, it uses modulo division to see if number has a remainder if divided by numbers 2-9.
+        #################################################################################################
+        if i==2 or i==3 or i==5 or i==7 or i!=1 and i%2 !=0 and i%3 !=0 and i%4 !=0 and i%5 !=0 and i%6 !=0 and i%7 !=0 and i%8 !=0 and i%9 !=0:
+            
+            ########################################################
+            # if number is prime, it is appended to list prime_nums
+            ########################################################
+            prime_nums.append(i)
+    
+    #######################################################################################################
+    # return the length of prime_nums to see how many prime numbers there are in given input, excluding 1.
+    ######################################################################################################
+    return len(prime_nums)
+    
+#check 
+count_primes(100)
+
+'''
+Expected output:
+
+25
+'''
