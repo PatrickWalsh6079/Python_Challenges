@@ -1,0 +1,96 @@
+'''
+SPY GAME
+
+This program takes in a list of integers and returns True if the integers contain 007 in that order.
+The 007 do not have to be consecutive, there can be other numbers in between.
+'''
+
+def spy_game(value):
+    ###############################################
+    #set counter variable to iterate through list.
+    ###############################################
+    counter = 0
+    
+    ################################################################
+    #set three variables to False, then as program iterates through 
+    #list these variables are switched on to True if 007 appears.
+    ################################################################
+    contains_0 = False
+    contains_00 = False
+    contains_7 = False
+    
+    ###################################################################################
+    #this variable is used in while loop to make sure counter variable has not reached
+    #limits greater than the length of the list.
+    ##################################################################################
+    length = len(value)-1
+    
+    ##############################################################################################
+    #start loop that checks to make sure the counter variable has not reached the end of the list 
+    #############################################################################################
+    while counter <= length:
+        ##########################################################################################
+        #if the integer at index 0 is a zero, it adds 1 to the counter and breaks from this first
+        #loop. if it is not a zero, it will add 1 to counter and continue to top of loop. if the
+        #loop iterates through the entire list without finding a zero, the While condition will 
+        #be met and the end of the program will be reached.
+        #########################################################################################
+        if value[counter] == 0:
+            contains_0 = True
+            counter += 1
+            break
+        else:
+            counter += 1
+            continue
+        
+    ####################################################################################
+    #this next loop plays the same function as the first loop, only it is checking for 
+    #the second zero in 007.
+    ###################################################################################
+    while counter <= length:
+        if value[counter] == 0:
+            contains_00 = True
+            counter += 1
+            break
+        else:
+            counter += 1
+            continue
+    ####################################################################################
+    #this final loop checks for the 7 in 007. if it finds the 7, it breaks out of the
+    #loop and ends the program. if it iterates through the entire list without finding
+    #a 7 the counter variable will reach its limits according to the while condition
+    #and the program will end.
+    ###################################################################################
+    while counter <= length:
+        if value[counter] == 7:
+            contains_7 = True
+            counter += 1
+            break
+        else:
+            counter += 1
+            continue
+    
+    ############################################################################
+    #this return statement gives the boolean of whether all three integers were
+    #found in the list.
+    ###########################################################################
+    return contains_0 == True and contains_00 == True and contains_7 == True
+    
+    
+#check 1
+spy_game([1,2,4,0,0,7,5])
+
+#check 2
+spy_game([1,0,2,4,0,5,7,5,6,3,4,1,2,4,3])
+
+#check 3
+spy_game([1,7,2,0,4,5,0])
+
+'''
+Expected output:
+
+True
+True
+False
+
+'''
