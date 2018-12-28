@@ -1,0 +1,34 @@
+'''
+PRINT BIG
+
+This program takes in a single letter as input and returns a 5x5 visual representation
+of that letter.
+'''
+
+############################################################################################
+# extended dictionary that holds the letters a,b,c,d,e as keys and the corresponding values
+# are visual representations of those letters in uppercase using asterisks *
+############################################################################################
+letters = {'a':'  *  \n * * \n*****\n*   *\n*   *','b':'* *  \n*   *\n* * \n*   *\n* *  ','c':'  *  \n*   *\n*    \n*   *\n  *  ','d':'*    \n* *  \n*  * \n* *  \n*    ','e':'*****\n*    \n**** \n*    \n*****'}
+
+###########################################
+# function that prints a value when called.
+###########################################
+def print_big(value):
+    print(value)
+    
+#########################################################################################
+# the value being called from the function is the dictionary we defined earlier, with the
+# key 'a' so that its corresponding value is depicted in the output below.
+#########################################################################################
+print_big(letters['a'])
+
+'''
+Expected output:
+
+  *  
+ * * 
+*****
+*   *
+*   *
+'''
