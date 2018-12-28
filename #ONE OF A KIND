@@ -1,0 +1,31 @@
+'''
+ONE OF A KIND
+
+This program takes in a list and returns a new list with 
+only the unique elements.
+'''
+
+
+def unique_list(l):
+    
+    ###############################################################
+    # variable reassignment pulls only unique values from original
+    # input and returns a new list with these unique values. uses
+    # set() method to extract unique values, and nests this method
+    # inside a list() method which converts the output to a list.
+    ###############################################################
+    newlist = (list(set(l)))
+        
+    return newlist
+
+
+##############
+# check input
+##############
+unique_list([1,1,1,1,2,2,3,3,3,3,4,5])
+
+'''
+Expected output:
+
+[1, 2, 3, 4, 5]
+'''
