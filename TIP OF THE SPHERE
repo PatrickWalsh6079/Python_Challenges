@@ -1,0 +1,35 @@
+'''
+TIP OF THE SPHERE
+
+This program calculates the volume of a sphere given the input
+of the radius.vThe mathematical formula for finding the volume given 
+the radius is: V = (4/3)πr3 where,
+V = volume
+π = 3.14
+r = radius
+Output is returned with a precision of two demicals.
+'''
+
+def vol(rad):
+    
+    ###############################################
+    # variable uses formula for calculating volume 
+    # based on the radius of sphere. 
+    ##############################################
+    volume = (4/3) * (3.14159) * rad**3
+    
+    #######################################################
+    # answer is returned with a precision of two decimals.
+    ######################################################
+    return str(round(volume,2))
+    
+##########################
+#check is assumed in feet
+#########################
+vol(15)
+
+'''
+Expected output:
+
+'14137.15'
+'''
