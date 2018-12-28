@@ -1,0 +1,46 @@
+'''
+WHAT'S IN A STRING
+
+This program takes in a string and returns the number of uppercase and 
+lowercase letters.
+'''
+
+
+
+def up_low(s):
+    #########################################################
+    # these variables will keep count of how many uppercase 
+    # and lowercase letters are in the string.
+    ########################################################
+    uppercase_count = 0
+    lowercase_count = 0
+    
+    ###########################################################################
+    # for loop iterates through string, checking each letter to see its case.
+    # if it is uppercase, it adds 1 to the uppercase_count variable. if the
+    # letter is lowercase, it adds 1 to the lowercase_count variable.
+    ##########################################################################
+    for i in s:
+        if i.isupper():
+            uppercase_count += 1
+        elif i.islower():
+            lowercase_count += 1
+    
+    ####################################################################
+    # results are tallied and added to the result variable, containing
+    # strings and variables for the output.
+    ###################################################################
+    result = print('The number of uppercase letters is:',uppercase_count,'\nThe number of lowercase letters is:',lowercase_count)
+    return result
+    
+    # check
+up_low('Hello Mr. Rogers, how are you this fine Tuesday?')
+
+
+
+'''
+Expected output:
+
+The number of uppercase letters is: 4 
+The number of lowercase letters is: 33
+'''
