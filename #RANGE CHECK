@@ -1,0 +1,40 @@
+'''
+RANGE CHECK
+
+This program checks whether a given input number is included in a range,
+inclusive of high or low.
+'''
+
+###############################################################
+# the first input is the number, the second and third are the
+# lower and upper limits to check in.
+##############################################################
+def ran_check(num,low,high):
+    
+    #############################################################
+    # if statement checks input number to see if it falls within
+    # range between low and high, and prints the result.
+    ############################################################
+    if num >= low and num <= high:
+        print(num,'is within the range between', low,'and', high)
+    else:
+        print(num,'does not fall within the range between', low,'and', high)
+    
+    ############################################################
+    # alternate simple boolean check that returns True or False.
+    ############################################################
+    return num >= low and num <= high
+    
+##############
+# check input
+#############
+ran_check(3,1,10)
+
+
+'''
+Expected output:
+
+3 is within the range between 1 and 10
+
+True
+'''
