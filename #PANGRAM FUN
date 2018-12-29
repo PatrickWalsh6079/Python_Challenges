@@ -1,0 +1,50 @@
+'''
+PANGRAM FUN
+
+This program takes in a string and returns a boolean of whether it contains 
+every letter in the alphabet.
+'''
+
+###############################################################################
+# import the string module to create a variable of all letters in the alphabet.
+###############################################################################
+import string
+
+############################################################################
+# function takes 1 value, the string to be input. alphabet variable
+# returns all letters of alphabet in lowercase, will be used for boolean
+# check at the end. counter variable is used later to iterate through list.
+###########################################################################
+def ispangram(value):
+    alphabet = string.ascii_lowercase
+    counter = 0
+    
+    #############################################################################
+    # from inner to outer: takes string and converts to lowercase, then extracts
+    # unique values with set() method, then sorts values with sorted() method.
+    ############################################################################
+    new_value = sorted(set(value.lower()))
+    
+    ###############################################################
+    # for loop iterates through list and removes any empty spaces.
+    ##############################################################
+    for i in new_value:
+        if new_value[counter] == ' ':
+            new_value.pop(counter)
+            counter += 1
+    
+    ###########################
+    # converts list to string.
+    ##########################
+    new_value = (''.join(new_value))
+    
+    return new_value == alphabet
+    
+    # check
+ispangram("The quick brown fox jumps over the lazy dog")
+
+'''
+Expected output:
+
+True
+'''
