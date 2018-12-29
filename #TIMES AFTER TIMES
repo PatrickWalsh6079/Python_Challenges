@@ -1,0 +1,30 @@
+'''
+TIMES AFTER TIMES
+
+This program multiplies all the numbers in a list and returns
+their product.
+'''
+
+def multiply(numbers):
+    ##################################################
+    # set new variable to 1, will be used to multiple 
+    # the input list.
+    #################################################
+    product = 1
+    
+    ##############################################################################
+    # for loop to iterate through list and get the product of all numbers in list.
+    ##############################################################################
+    for i in numbers:
+        product *= i
+        
+    return product
+    
+    # check
+multiply([1,2,3,-4])
+
+'''
+Expected output:
+
+-24
+'''
