@@ -1,0 +1,23 @@
+'''
+STRING SYMMETRY
+
+This program checks with a string is a palindrome, as in, does it read the same
+forward and backward.
+'''
+
+def palindrome(s):
+    
+    ############################################################
+    # simple return statement that does a boolean check of the 
+    # string forward and reversed.
+    ###########################################################
+    return s == s[::-1]
+    
+# check
+palindrome('hannah')
+
+'''
+Expected output:
+
+True
+'''
