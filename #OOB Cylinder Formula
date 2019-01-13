@@ -1,0 +1,55 @@
+'''
+This program uses Object Oriented Programming to create a user-defined class for
+calculating values of a cylinder. It returns the volume and surface area of a cylinder.
+It has two attributes, 'height' and 'radius', and one argument 'object'. There will be
+two methods defined inside this class which calculate volume and surface area.
+
+Formulas:
+
+Volume:
+V=πr2h
+
+Surface area:
+A=2πrh+2πr2
+'''
+
+################
+# name of class
+###############
+class Cylinder(object):
+        #####################################################################
+        # use self keyword, followed by two attributes 'height' and 'radius'
+        #####################################################################
+        def __init__(self, height=1, radius=1):
+            self.height = height
+            self.radius = radius
+        
+        ########################################################
+        # this method is the formula for calculating the volume
+        #######################################################
+        def volume(self):
+            pi = 3.14
+            return pi * self.radius**2 * self.height
+        
+        ################################################################
+        # this method is the formalula for calculating the surface area
+        ################################################################
+        def surface_area(self):
+            pi = 3.14
+            return (2 * pi * self.radius * self.height)+(2 * pi * self.radius**2)
+        
+        
+###############
+# check output
+##############
+c = Cylinder(2,3)
+
+c.volume()
+c.surface_area()
+
+'''
+Expected output:
+
+56.52
+94.2
+'''
