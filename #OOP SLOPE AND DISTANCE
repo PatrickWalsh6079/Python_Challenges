@@ -1,0 +1,73 @@
+'''
+This program uses Object Oriented Programming to create a user-defined class which takes 
+in two sets of (X,y) coordinates and returns the distance between these two points and 
+their slope. This class takes in two attributes, 'coordinate 1' and 'coordinate 2' and
+has two methods 'distance' and 'slope'.
+
+Formulas:
+
+Distance:
+sqrt[(x2-x1)^2 + (y2-y1)^2]
+
+Slope:
+(y2-y1)/(x2-x1)
+'''
+
+##############################################
+# import math module for square root function
+#############################################
+import math
+
+################
+# name of class
+###############
+class Line(object):
+    ################################################
+    # define two attributes 'coord_1' and 'coord_2'
+    ###############################################
+    def __init__(self,coord_1,coord_2):
+        self.coord_1 = coord_1
+        self.coord_2 = coord_2
+    
+    ##########################################################
+    # this method calculates distance between two coordinates
+    ##########################################################
+    def distance(self):
+        return math.sqrt((self.coord_2[0]-self.coord_1[0])**2 + (self.coord_2[1]-self.coord_1[1])**2)
+    
+    #####################################################
+    # this method calculates the slope of the two points
+    ####################################################
+    def slope(self):
+        return (self.coord_2[1]-self.coord_1[1])/(self.coord_2[0]-self.coord_1[0])
+
+
+
+
+#################################################
+# pass in values as tuples for (x,y) coordinates
+################################################
+coordinate1 = (3,2)
+coordinate2 = (8,10)
+
+####################################################
+# variable uses class Line and passes in coordinates
+####################################################
+li = Line(coordinate1,coordinate2)
+
+#################
+# check distance
+################
+li.distance()
+
+##############
+# check slope
+#############
+li.slope()
+
+'''
+Expected output:
+
+9.433981132056603
+1.6
+'''
