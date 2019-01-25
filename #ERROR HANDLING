@@ -1,0 +1,79 @@
+'''
+Implement error handling below by using 'try', 'except', and 'finally' blocks
+'''
+
+# error handling 1
+
+for i in ['a','b','c']:
+    try:
+        i**2
+    except:
+        print('Make sure you are squaring valid integers!')
+        
+'''
+Expected output:
+
+Make sure you are squaring valid integers!
+Make sure you are squaring valid integers!
+Make sure you are squaring valid integers!
+'''
+
+
+
+
+
+# error handling 2
+
+# handle the exception below by using 'try' and 'except' blocks, then
+# use a 'finally' block to print 'All Done'
+
+x = 5
+y = 0
+
+try:
+    z = x/y
+except:
+    print("Make sure your 'x' and 'y' variables are non-zero integers")
+finally:
+    print('All Done')
+    
+'''
+Expected output:
+
+Make sure your 'x' and 'y' variables are non-zero integers
+All Done
+'''
+
+
+
+
+
+# error handling 3
+
+# write a function that aks for an integer and prints the square of it
+# use a 'while' loop with 'try' and 'except' blocks to handle incorrect inputs
+
+def ask():
+    while True:
+        
+        try:
+            squared = int(input("Please enter a number to have it squared: "))
+            print(squared,' squared is: ',squared**2)
+            break
+        except:
+            print('Make sure you entered a valid integer!')
+            continue
+
+
+ask()
+'''
+Expected output:
+
+try:
+Please enter a number to have it squared: 5
+5  squared is:  25
+
+except:
+Please enter a number to have it squared: f
+Make sure you entered a valid integer!
+'''
